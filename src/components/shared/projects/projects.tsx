@@ -43,7 +43,7 @@ export default function ProjectsListBlock() {
                 </ul>
             </div>
 
-            <div className="flex flex-wrap justify-between">
+            <div className="flex flex-wrap lg:justify-between justify-center gap-2 lg:gap-0">
                 {(choosedType === "developed" ? developedList : designedList).map((project, i) => (
                     <Link data-aos="fade-up" href={project.link} key={i} className="flex flex-col items-center justify-center mt-[57.5px] project-hover">
                         <div className="rounded-full w-[250px] h-[250px]mb-3 select-none project-img-hover">

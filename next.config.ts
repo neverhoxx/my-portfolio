@@ -8,6 +8,13 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   devIndicators: false,
+  typescript: {
+    ignoreBuildErrors: false,
+    tsconfigPath: './tsconfig.json',
+  },
+  experimental: {
+    typedRoutes: false,
+  },
 };
 
 export default nextConfig;
