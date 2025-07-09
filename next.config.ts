@@ -1,20 +1,24 @@
 import type { NextConfig } from "next";
+import path from 'path';
 
 const nextConfig: NextConfig = {
   output: 'export',
   basePath: process.env.NODE_ENV === 'production' ? '/my-portfolio' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/my-porfolio/' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/my-portfolio/' : '',
+  trailingSlash: true,
+
   images: {
     unoptimized: true,
   },
-  devIndicators: false,
+
   typescript: {
     ignoreBuildErrors: false,
     tsconfigPath: './tsconfig.json',
   },
-  experimental: {
-    typedRoutes: false,
-  },
+
+  devIndicators: {
+    buildActivity: false
+  }
 };
 
 export default nextConfig;
