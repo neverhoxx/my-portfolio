@@ -24,7 +24,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out  # Указываем вашу папку с билдом
+          path: ./out
+          destination_dir: ./my-portfolio
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
